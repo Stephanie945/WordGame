@@ -1,0 +1,12 @@
+JMenuItem attributionItem = new JMenuItem("Attribution");
+attributionItem.addActionListener(e -> {
+    JOptionPane.showMessageDialog(frame,
+        "Image Attributions:\n" +
+        "- Prize1 image: Pixabay user XYZ\n" +
+        "- Prize2 image: Pixabay user ABC\n\n" +
+        "Sound Attributions:\n" +
+        "- Correct guess sound: Freesound user DEF\n" +
+        "- Incorrect guess sound: Freesound user GHI\n",
+        "Attribution", JOptionPane.INFORMATION_MESSAGE);
+});
+aboutMenu.add(attributionItem);

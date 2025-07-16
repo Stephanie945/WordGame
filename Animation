@@ -1,0 +1,20 @@
+class FloatingCirclePanel extends JPanel {
+    private int x = 0;
+    private int y = 50;
+    
+    public FloatingCirclePanel() {
+        Timer timer = new Timer(30, e -> {
+            x += 5;
+            if(x > getWidth()) x = 0;
+            repaint();
+        });
+        timer.start();
+    }
+    
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.setColor(Color.RED);
+        g.fillOval(x, y, 30, 30);
+    }
+}
